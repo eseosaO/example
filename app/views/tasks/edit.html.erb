@@ -1,0 +1,16 @@
+<%= link_to('Back to Available task List', tasks_path, class: 'back-link') %><br />
+<div class="tasks edit">
+  <h1>Edit Task</h1>
+
+  <%= form_for(@task) do |tk| %>
+    <% #url: task_path(@task), method: 'patch' %>
+
+    <!--    take the value of tk here and pass it to local variable tk in partial-->
+    <%= render(partial: 'form', locals: {tk: tk}) %>
+
+    <div class="form-buttons">
+      <%= tk.submit("Edit Task") %>
+    </div>
+  <% end %>
+
+</div>

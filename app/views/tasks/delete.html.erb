@@ -1,0 +1,19 @@
+<%= link_to('Back to Available task List', tasks_path, class: 'back-link') %><br />
+
+<div class="tasks delete">
+  <h2> Delete Task</h2>
+
+  <%= form_for(@task, method: 'delete') do |tk| %>
+    <% #url: task_path(@task), method: 'delete' %>
+
+    <p>Are you sure you want to delete this task permanently?</p>
+    <p>Name of task: <%= @task.name %></p>
+
+    <p>You can delete with the button below or click this link <%= link_to "Here", :back %> to cancel</p>
+
+    <div class="form-buttons">
+      <%= tk.submit("Delete Task") %> <br />
+    </div>
+
+  <% end %>
+</div>

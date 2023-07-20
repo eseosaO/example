@@ -1,0 +1,30 @@
+<%= link_to('Back to Available Categories List', categories_path, class: 'back-link') %><br />
+<%= link_to('Back to Home page', {controller: 'main', action: 'index'}) %><br />
+
+<div class="categories show">
+  <h2>Show Category</h2>
+
+  <div class="actions">
+    <%= link_to("Edit", edit_category_path(@category)) %> <!--    We need @task for instance as we are inside a loop-->
+    <%= link_to('Delete', delete_category_path(@category)) %>
+  </div>
+
+  <table summary="Category detail view">
+    <tr>
+      <th>Name:</th>
+      <td><%= @category.name %></td>
+    </tr>
+
+    <tr>
+      <th>Created:</th>
+      <td><%= @category.created_at %></td>
+    </tr>
+
+    <tr>
+      <th>Updated</th>
+      <td><%= @category.updated_at %></td>
+    </tr>
+
+  </table>
+
+</div>

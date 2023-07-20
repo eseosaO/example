@@ -1,0 +1,27 @@
+<% x=1+1 %><br />
+
+
+<h1>My Example App</h1>
+<p>This is an application for demonstrating <%= x %> examples of app.</p>
+
+<!--<a href ="/tasks/index">List of apps</a><br />-->
+
+<%=
+  #link_to('Another link to view the available tasks', {controller: 'tasks', action: 'index', page: 1})
+  link_to('view the available Tasks', tasks_path(page: 1))
+%><br />
+
+<%=
+  link_to('All Catogories',categories_path)
+%><br />
+
+
+<%=
+  link_to('About page', {controller: 'main', action: 'about', id: 20, page: 5})
+%><br />
+
+
+
+
+
+

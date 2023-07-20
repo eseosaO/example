@@ -1,0 +1,24 @@
+<table summary="Task form fields">
+  <tr>
+    <th>Name</th>
+    <td><%= tk.text_field(:name) %></td>
+  </tr>
+  <tr>
+    <th>Position</th>
+    <td><%= tk.text_field(:position) %></td>
+  </tr>
+  <tr>
+<!--    Field below is for a collection to display dropdown with a collection of category names
+        with reference to the category's id. -->
+    <th>Category</th>
+    <td><%= tk.collection_select :category_id, Category.all, :id, :name %></td>
+  </tr>
+  <tr>
+    <th>Completed</th>
+    <td><%= tk.check_box(:completed) %></td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td><%= tk.text_area(:description) %></td>
+  </tr>
+</table>

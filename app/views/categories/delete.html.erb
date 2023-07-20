@@ -1,0 +1,19 @@
+<%= link_to('Back to Available task List', categories_path, class: 'back-link') %><br />
+
+<div class="categories delete">
+  <h2> Delete Category</h2>
+
+  <%= form_for(@category, method: 'delete') do |ct| %>
+    <% #url: category_path(@category), method: 'delete' %>
+
+    <p>Are you sure you want to delete this category permanently?</p>
+    <p>Name of category: <%= @category.name %></p>
+
+    <p>You can delete with the button below or click this link <%= link_to "Here", :back %> to cancel</p>
+
+    <div class="form-buttons">
+      <%= ct.submit("Delete Category") %> <br />
+    </div>
+
+  <% end %>
+</div>
