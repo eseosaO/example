@@ -8,7 +8,7 @@ class CategoriesController < ApplicationController
   end
 
   def new
-    @category = Category.new()
+    @category = Category.new(name: "#Enter Category name#")
   end
 
   def category_params
